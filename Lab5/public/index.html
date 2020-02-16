@@ -1,0 +1,58 @@
+<html>
+    <body>
+        <script>
+            function readId(event) {
+
+                event.preventDefault();
+
+                let element = document.querySelector("#id");
+
+                fetch("/api/pokemon/id/" + element.value)
+                    .then((res) => {
+                        return res.json();
+                    })
+                    .then((processed) => {
+                        let reporting = document.querySelector("#reportingArea");
+
+                        if(processed.error) {
+                            reporting.innerHTML = processed.error;
+                        } else {
+                            reporting.innerHTML = processed.name;
+                        }
+                });
+            }
+
+            function readName(event) {
+
+                event.preventDefault();
+
+                let element = document.querySelector("#name");
+
+                fetch("/api/pokemon/name/" + element.value)
+                    .then((res) => {
+                        return res.json();
+                    })
+                    .then((processed) => {
+                        let reporting = document.querySelector("#reportingArea");
+
+                        if(processed.error) {
+                            reporting.innerHTML = processed.error;
+                        } else {
+                            reporting.innerHTML = processed.name;
+                        }
+                });
+            }
+        </script>
+        <h2>ID</h2>
+        <form onsubmit="readId(event)">
+            <input id="id" type="number">
+            <button>Go</button>
+        </form>
+        <h2>Name</h2>
+        <form onsubmit="readName(event)">
+            <input id="name" type="text">
+            <button>Go</button>
+        </form>
+        <div id="reportingArea"></div>
+    </body>
+</html>
