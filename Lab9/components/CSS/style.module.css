@@ -1,0 +1,9 @@
+.text {
+    font: italic 16px system;
+  }
+
+.report {
+    background-color: aquamarine;
+    color: red;
+    font: 32px system;
+}
