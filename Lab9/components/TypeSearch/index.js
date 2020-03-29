@@ -2,7 +2,7 @@ import React from "react";
 
 class TypeSearch extends React.Component {
 
-    readName(event) {
+    readType(event) {
 
         event.preventDefault();
 
@@ -35,8 +35,8 @@ class TypeSearch extends React.Component {
     render() {
         return(
             <div>
-                 <h2>Name</h2>
-                 <form onSubmit={this.readName}>
+                 <h2>Type</h2>
+                 <form onSubmit={this.readType}>
                     <input id="type" type="text" />
                     <button>Go</button>
                 </form>
