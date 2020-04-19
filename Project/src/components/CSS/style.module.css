@@ -1,0 +1,39 @@
+.bio {
+    background-image: linear-gradient(to right, rgb(62, 70, 87) , rgb(23, 26, 34));
+}
+
+.skills {
+    background-image: linear-gradient(to right, rgb(41, 49, 65) , rgb(0, 0, 0));
+}
+
+.accomplish {
+    background-image: linear-gradient(to right, rgb(117, 112, 81) , rgb(26, 25, 21));
+}
+
+/* not classes */
+div {
+    color: white;
+}
+
+h2 {
+    font-size: 32px;
+    margin: 0px;
+    text-align: center;
+}
+
+p {
+    font-size: 24px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    max-width: 75%;
+}
+
+ul {
+    font-size: 24px;
+    list-style-type: square;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 20%;
+}
